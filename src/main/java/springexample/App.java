@@ -9,6 +9,7 @@ import javax.annotation.Resource;
 @Component
 public class App {
 
+    @Autowired
     BookProvider library;
 
     public void doSomething() {

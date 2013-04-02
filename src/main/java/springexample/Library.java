@@ -5,7 +5,6 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 
-@Component
 public class Library implements BookProvider {
     private Location location;
     private String name;
