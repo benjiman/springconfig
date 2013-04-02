@@ -1,6 +1,14 @@
 package springexample;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+import javax.annotation.Resource;
+
+@Component
 public class App {
+
     BookProvider library;
 
     public void doSomething() {
@@ -10,14 +18,6 @@ public class App {
         library.returnBook(loTR);
 
         System.out.println("************************");
-    }
-
-    public void setLibrary(BookProvider bookProvider) {
-        this.library = bookProvider;
-    }
-
-    public BookProvider getLibrary() {
-        return library;
     }
 }
 

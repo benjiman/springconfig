@@ -1,5 +1,11 @@
 package springexample;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import javax.annotation.Resource;
+
+@Component
 public class Library implements BookProvider {
     private Location location;
     private String name;
@@ -15,19 +21,19 @@ public class Library implements BookProvider {
         System.out.println("Returning " + book.name + " to " + name + " in " + location);
     }
 
-    public String getName() {
-        return name;
-    }
-
     public void setName(String name) {
         this.name = name;
     }
 
-    public Location getLocation() {
-        return location;
-    }
-
     public void setLocation(Location location) {
         this.location = location;
+    }
+
+    public Location getLocation() {
+        return this.location;
+    }
+
+    public String getName() {
+        return this.name;
     }
 }
