@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
     public static void main(String... args) {
-        ApplicationContext context = new AnnotationConfigApplicationContext(AppContext.class);
+        ApplicationContext context = new AnnotationConfigApplicationContext(ParameterConfig.class, AppContext.class);
         context.getBean(App.class).doSomething();
     }
 }
